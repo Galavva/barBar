@@ -5,32 +5,224 @@
     <meta charset="utf-8">
 
     <title>Bark Bar</title>
+
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+
     <meta name="description" content="HTML5 Template">
+    <style>
+    body{
+      padding-top: 40px;
+    }
+    </style>
 
   </head>
 
   <body>
-    <h1>Bark Bar <img src="images/BarkBarLogo.png" alt="Bark Bar Logo" style="width:50px;height:50px"></h1>
 
-    <div class="nav">
-      <ul>
-        <li><a href="index.html">Home</a>
-        </li>
-        <li><a href="forPuppers.html">For Puppers</a>
-        </li>
-        <li><a href="drinks.html">Drinks</a>
-        </li>
-        <li><a href="food.html">Food</a>
-        </li>
-        <li><a href="contact.html">Contact Us</a>
-        </li>
-      </ul>
+    <!-- nav -->
+    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" id="nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a href="" class="navbar-brand">Bark Bar</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a>
+            </li>
+            <li><a href="forPuppers.html">For Puppers</a>
+            </li>
+            <li><a href="#drinks">Drinks</a>
+            </li>
+            <li><a href="#food">Food</a>
+            </li>
+            <li><a href="#contact">Contact Us</a>
+            </li>
+          </ul>
+
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <div class="jumbotron" id="home">
+      <div class="container">
+        <div class="col-sm-8">
+          <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:150px;height:150px">Bark Bar</h1>
+          <p>Welcome and thank you for checking out our website.  Bark Bar is a place for people who love two things.  Bars and dogs!  Whether you have a furry companion of your own or you just want to hang out with some dogs and similiar minded people then feel free to come on in check it out!  We have a full alcoholic bar, a full coffee bar, and a full treat bar!  Dog owners be sure to check out our <a href="forPuppers.html" target="_blank"> For Puppers</a> page to see what you need to bring your dog in.
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="images/RunningPupper.jpg" class="img-rounded" alt="Running Pupper Image">
+        </div>
+      </div>
     </div>
 
-    <div class="opener">
-      <p>Welcome and thank you for checking out our website.  Bark Bar is a place for people who love two things.  Bars and dogs!  Whether you have a furry companion of your own or you just want to hang out with some dogs and similiar minded people then feel free to come on in check it out!  We have a full alcoholic bar, a full coffee bar, and a full treat bar!  Dog owners be sure to check out our <a href="forPuppers.html" target="_blank"> For Puppers</a> page to see what you need to bring your dog in.
-      </p>
-      <img src="images/RunningPupper.jpg" alt="Running Pupper Image" style="">
+    <!-- Food -->
+    <div class="container">
+      <section>
+        <div class="page-header" id="food">
+      </section>
+      <h1>Food<h1>
+      <table class="table-striped">
+        <tr>
+          <th>Food</th>
+          <th>Description</th>
+          <th>Cost</th>
+        </tr>
+        <tr>
+          <td>Loaded Fries<img src="images/LoadedFries.jpg" class="img-responsive img-circle" alt="Loaded Fries" align="right"></td>
+          <td>Our cripsy loaded fries come with bacon and cheese. Doggos give it two paws up!</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Stuffed Mushrooms<img src="images/stuffedMush.jpeg" alt="Stuffed Mushrooms" class="img-responsive img-circle" align="right"></td>
+          <td>White mushrooms packed with breadcrumbs and romano cheese. Sure to get your mouth watering.</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>Spinach Dip<img src="images/spinachDip.jpeg" alt="Spinach Dip" class="img-responsive img-circle" align="right"></td>
+          <td>This cheesy spinach dip comes with our house baked tortilla chips</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Salsa<img src="images/salsa.jpeg" alt="Salsa" class="img-responsive img-circle" align="right"></td>
+          <td>Our sweet salsa is incredible for people but keep it away from the dogs. They're not big fans of onions.</td>
+          <td>5</td>
+        </tr>
+      </table>
     </div>
+
+    <!-- Drinks -->
+    <div class="container">
+      <section>
+        <div class="page-header" id="drinks">
+        </div>
+      </section>
+      <h1>Drinks<h1>
+
+      <h3>Wine</h3>
+      <img src="images/Wine.jpg" alt="wine" class="img-responsive img-circle">
+        <table class="table-striped">
+          <tr>
+            <th>Red</th>
+            <th>Cost</th>
+          </tr>
+          <tr>
+            <td>Merlot</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Cabernet</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Red Blend</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th>White</th>
+            <th>Cost</th>
+          </tr>
+          <tr>
+            <td>Chardonnay</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Moscato</td>
+            <td>5</td>
+          </tr>
+        </table>
+
+        <h3>Beer</h3>
+        <img src="images/Beer.jpg" class="img-responsive img-circle">
+        <table class="table-striped">
+          <tr>
+            <th>Domestics</th>
+            <th>Cost</th>
+          </tr>
+          <tr>
+            <td>Bud Light</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Busch</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Miller Lite</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th>Imports</th>
+            <th>Cost</th>
+          </tr>
+            <td>Heineken</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Guiness</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Foster's</td>
+            <td>6</td>
+          </tr>
+        </table>
+    </div>
+
+
+    <!-- Contact Us -->
+    <div class="container">
+      <section>
+        <div class="page-header" id="contact"</div>
+      </section>
+      <div class="container text-center">
+      <h1>Contact Us</h1>
+      <h3>Please fill out this form and we'll get back to your provided email address as soon as possible</h3>
+
+        <form action="">
+          <div class="form-group">
+            <label for="First name">First Name
+              <input type="text" class="form-control" id="firstname" placeholder="First Name">
+            <label for="Last name">Last Name
+              <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+            <label for="Email Address">Email Address
+              <input type="text" class="form-control" id="email" placeholder="Email Address">
+              <br>
+            <input type="radio" name="issue" value="question" checked>Question<br>
+            <input type="radio" name="issue" value="problem">Problem<br>
+            <input type="radio" name="issue" value="status">Order Status Update<br>
+            <br><br>
+            <textarea name="comments" rows="10" cols="30" placeholder="Comments?" style="margin: 0px; height: 168px; width: 607px;"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <hr>
+        <div class="container text-center">
+          <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:150px;height:150px">Bark Bar</h1>
+        </div>
+    </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>

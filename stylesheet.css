@@ -1,0 +1,45 @@
+/* RGB */
+$color1: rgba(133, 126, 97, 1);
+$color2: rgba(48, 107, 52, 1);
+$color3: rgba(0, 0, 0, 1);
+$color4: rgba(165, 204, 107, 1);
+$color5: rgba(106, 213, 203, 1);
+
+body {
+    font: 400 15px Lato, sans-serif;
+}
+a {
+  color: #000000;
+}
+.jumbotron {
+    background-color: rgba(133, 126, 97, 1);
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+}
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-family: Montserrat, sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #000000;
+    background-color: #306B34 !important;
+}
+.table-striped  {
+  font: 400 15px Lato, sans-serif
+
+}
+
+#food {
+  background-color: #306B34
+}
+
+.footer {
+  background-color: rgba(133, 126, 97, 1);
+}
