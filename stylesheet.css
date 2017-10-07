@@ -6,11 +6,9 @@ $color4: rgba(165, 204, 107, 1);
 $color5: rgba(106, 213, 203, 1);
 
 body {
-    font: 400 15px Lato, sans-serif;
+    font: sans-serif;
 }
-a {
-  color: #000000;
-}
+
 .jumbotron {
     background-color: rgba(133, 126, 97, 1);
     color: #fff;
@@ -33,11 +31,13 @@ a {
 }
 .table-striped  {
   font: 400 15px Lato, sans-serif
+}
 
+#carousel-screenshot p {
+  font: 200;
 }
 
 #food {
-  background-color: #306B34
 }
 
 .footer {

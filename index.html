@@ -41,8 +41,8 @@
           <ul class="nav navbar-nav">
             <li><a href="#home">Home</a>
             </li>
-            <li><a href="forPuppers.html">For Puppers</a>
-            </li>
+          <!--  <li><a href="forPuppers.html">For Puppers</a>
+          </li> -->
             <li><a href="#drinks">Drinks</a>
             </li>
             <li><a href="#food">Food</a>
@@ -59,8 +59,9 @@
       <div class="container">
         <div class="col-sm-8">
           <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:150px;height:150px">Bark Bar</h1>
-          <p>Welcome and thank you for checking out our website.  Bark Bar is a place for people who love two things.  Bars and dogs!  Whether you have a furry companion of your own or you just want to hang out with some dogs and similiar minded people then feel free to come on in check it out!  We have a full alcoholic bar, a full coffee bar, and a full treat bar!  Dog owners be sure to check out our <a href="forPuppers.html" target="_blank"> For Puppers</a> page to see what you need to bring your dog in.
+          <p>Welcome and thank you for checking out our website.  Bark Bar is a place for people who love two things.  Bars and dogs!  Whether you have a furry companion of your own or you just want to hang out with some dogs and similiar minded people then feel free to come on in check it out!  We have a full alcoholic bar and a full treat bar!
           </p>
+          <!--  Dog owners be sure to check out our <a href="forPuppers.html" target="_blank"> For Puppers</a> page to see what you need to bring your dog in. -->
         </div>
         <div class="col-sm-4">
           <img src="images/RunningPupper.jpg" class="img-rounded" alt="Running Pupper Image">
@@ -69,19 +70,58 @@
     </div>
 
     <!-- Food -->
-    <div class="container">
-      <section>
-        <div class="page-header" id="food">
-      </section>
+    <div class="container" id="food">
       <h1>Food<h1>
-      <table class="table-striped">
+        <div class="carousel slide" id="food-carousel" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#food-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#food-carousel" data-slide-to="1"></li>
+            <li data-target="#food-carousel" data-slide-to="2"></li>
+            <li data-target="#food-carousel" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="images/Fries.jpg" alt="Loaded Fries">
+              <div class="carousel-caption">
+                <h2>Our cripsy loaded fries come with bacon and cheese. Doggos give it two paws up!  $8</h2>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/stuffedMush.jpeg" alt="Stuffed Mushrooms" class="img-stretch">
+              <div class="carousel-caption">
+                <h2>White mushrooms packed with breadcrumbs and romano cheese. Sure to get you droolin!  $7</h2>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/spinachDip.jpeg" alt="Spinach Dip">
+              <div class="carousel-caption">
+                <h2>This cheesy spinach dip comes with our house baked tortilla chips.  $8</h2>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-caption">
+                <h2>Our sweet salsa is incredible for people but keep it away from the dogs. They're not big fans of onions. $5</h2>
+              </div>
+              <img src="images/salsa.jpeg" alt="Salsa">
+            </div>
+            <a href="#food-carousel" class="left carousel-control" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#food-carousel" class="right carousel-control" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+<!--
         <tr>
           <th>Food</th>
           <th>Description</th>
           <th>Cost</th>
         </tr>
         <tr>
-          <td>Loaded Fries<img src="images/LoadedFries.jpg" class="img-responsive img-circle" alt="Loaded Fries" align="right"></td>
+          <td>Loaded Fries<img src="images/Fries.jpg" class="img-responsive img-circle" alt="Loaded Fries" align="right"></td>
           <td>Our cripsy loaded fries come with bacon and cheese. Doggos give it two paws up!</td>
           <td>8</td>
         </tr>
@@ -102,14 +142,39 @@
         </tr>
       </table>
     </div>
+  -->
 
     <!-- Drinks -->
-    <div class="container">
-      <section>
-        <div class="page-header" id="drinks">
-        </div>
-      </section>
+    <div class="container" id="drinks">
       <h1>Drinks<h1>
+        <div class="carousel slide" id="drink-carousel" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#drink-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#drink-carousel" data-slide-to="1"></li>
+          </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/Wine.jpg" alt="Wine">
+            <div class="carousel-caption">
+              <h2>All of our house wines are $5</h2>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/Beer.jpg" alt="Beer">
+            <div class="carousel-caption">
+              <h2>All of our drafts are $5</h2>
+            </div>
+          </div>
+        </div>
+        <a href="#drink-carousel" class="left carousel-control" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#drink-carousel" class="right carousel-control" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+  </div>
+<!--
 
       <h3>Wine</h3>
       <img src="images/Wine.jpg" alt="wine" class="img-responsive img-circle">
@@ -181,6 +246,8 @@
         </table>
     </div>
 
+  -->
+
 
     <!-- Contact Us -->
     <div class="container">
@@ -211,12 +278,11 @@
           </div>
         </form>
     </div>
-
     <!-- Footer -->
     <footer>
       <hr>
         <div class="container text-center">
-          <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:150px;height:150px">Bark Bar</h1>
+          <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:100px;height:100px">Bark Bar</h1>
         </div>
     </footer>
 
