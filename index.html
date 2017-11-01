@@ -258,14 +258,14 @@
       <h1>Contact Us</h1>
       <h3>Please fill out this form and we'll get back to your provided email address as soon as possible</h3>
 
-        <form action="">
+        <form name="contactForm" action="">
           <div class="form-group">
             <label for="First name">First Name
-              <input type="text" class="form-control" id="firstname" placeholder="First Name">
+              <input type="text" class="form-control" name="firstName" placeholder="First Name">
             <label for="Last name">Last Name
-              <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+              <input type="text" class="form-control" name="lastName" placeholder="Last Name">
             <label for="Email Address">Email Address
-              <input type="text" class="form-control" id="email" placeholder="Email Address">
+              <input type="text" class="form-control" name="email" placeholder="Email Address">
               <br>
             <input type="radio" name="issue" value="question" checked>Question<br>
             <input type="radio" name="issue" value="problem">Problem<br>
@@ -273,7 +273,8 @@
             <br><br>
             <textarea name="comments" rows="10" cols="30" placeholder="Comments?" style="margin: 0px; height: 168px; width: 607px;"></textarea>
             <br><br>
-            <input type="submit" value="Submit">
+            <span id="errorMessage" class="error">Please fill out whole form</span><br>
+            <input type="submit" value="Submit" onclick="return validate();">
             <input type="reset" value="Reset">
           </div>
         </form>
@@ -281,10 +282,59 @@
     <!-- Footer -->
     <footer>
       <hr>
+        <p>The time is:</p>
         <div class="container text-center">
           <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:100px;height:100px">Bark Bar</h1>
         </div>
     </footer>
+
+  <script type="text/javascript">
+      function validate()
+      {
+        var errorMessage = document.getElementByID("errorMessage").style.visibility = "visible";
+        var invisibleError = document.getElementByID("errorMessage").style.visibility = "hidden";
+        var fName = document.contactForm.firstName;
+        var errorFlag = 0;
+        if (fName.value === "")
+        {
+          errorMessage;
+          errorFlag++;
+        }
+        else {
+          invisibleError;
+        }
+
+        var lName = document.contactForm.lastName;
+        if(lName.value === "")
+        {
+          errorMessage;
+          errorFlag++
+        }
+        else {
+          invisibleError;
+        }
+
+        var email = document.contactForm.email;
+        if(email.value === "")
+        {
+          errorMessage;
+          errorFlag++
+        }
+        else {
+          invisibleError;
+        }
+        
+        if(errorFlag == 0)
+        {
+          return true;
+        }
+
+        else{
+          return false;
+        }
+      }
+  </script>
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
