@@ -41,16 +41,20 @@
           <ul class="nav navbar-nav">
             <li><a href="#home">Home</a>
             </li>
-          <!--  <li><a href="forPuppers.html">For Puppers</a>
-          </li> -->
-            <li><a href="#drinks">Drinks</a>
-            </li>
-            <li><a href="#food">Food</a>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn" onclick="dropdown()">Menu<span class="glyphicon glyphicon-triangle-bottom"></span>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                  <a href="#food">Food</a>
+                  <a href="#drinks">Drinks</a>
+                </div>
+              </div>
             </li>
             <li><a href="#contact">Contact Us</a>
             </li>
           </ul>
-
+        </div>
       </div>
     </nav>
 
@@ -111,7 +115,6 @@
               <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
           </div>
-
         </div>
       </div>
 <!--
@@ -172,8 +175,8 @@
         <a href="#drink-carousel" class="right carousel-control" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
+      </div>
     </div>
-  </div>
 <!--
 
       <h3>Wine</h3>
@@ -258,7 +261,7 @@
       <h1>Contact Us</h1>
       <h3>Please fill out this form and we'll get back to your provided email address as soon as possible</h3>
 
-        <form name="contactForm" action="">
+        <form name="contactForm" onsubmit="return validateForm()" action="">
           <div class="form-group">
             <label for="First name">First Name
               <input type="text" class="form-control" name="firstName" placeholder="First Name">
@@ -274,16 +277,17 @@
             <textarea name="comments" rows="10" cols="30" placeholder="Comments?" style="margin: 0px; height: 168px; width: 607px;"></textarea>
             <br><br>
             <span id="errorMessage" class="error">Please fill out whole form</span><br>
-            <input type="submit" value="Submit" onclick="return validate();">
+            <input type="submit" value="Submit" onclick="return validate();" method="get">
             <input type="reset" value="Reset">
           </div>
         </form>
+      </div>
     </div>
     <!-- Footer -->
     <footer>
       <hr>
-        <p id="time"></p>
         <div class="container text-center">
+          <p id="time"></p>
           <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:100px;height:100px">Bark Bar</h1>
         </div>
     </footer>
@@ -297,39 +301,29 @@
         var errorFlag = 0;
         if (fName.value === "")
         {
-          errorMessage;
           errorFlag++;
-        }
-        else {
-          invisibleError;
         }
 
         var lName = document.contactForm.lastName;
         if(lName.value === "")
         {
-          errorMessage;
           errorFlag++
-        }
-        else {
-          invisibleError;
         }
 
-        var email = document.contactForm.email;
-        if(email.value === "")
+        var mail = document.contactForm.email;
+        if(mail.value === "")
         {
-          errorMessage;
           errorFlag++
-        }
-        else {
-          invisibleError;
         }
 
         if(errorFlag == 0)
         {
+          invisibleError;
           return true;
         }
 
         else{
+          errorMessage;
           return false;
         }
       }
@@ -347,6 +341,22 @@
         minutes = minutes < 10 ? '0'+minutes : minutes;
         var strTime = 'Today is: ' + date + ' ' + hours + ':' + minutes + ' ' + ampm;
         return strTime;
+      }
+
+            /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+      function dropdown() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+        }
       }
   </script>
 

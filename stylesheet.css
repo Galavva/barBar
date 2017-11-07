@@ -22,10 +22,11 @@ body {
     letter-spacing: 4px;
     font-family: Montserrat, sans-serif;
 }
-.navbar li a, .navbar .navbar-brand {
+
+.navbar li a, .navbar, .navbar-brand, .dropdown, .dropbtn {
     color: #fff !important;
 }
-.navbar-nav li a:hover, .navbar-nav li.active a {
+.navbar-nav li a:hover, .navbar-nav li.active a, .dropdown:hover, .dropbtn:hover {
     color: #000000;
     background-color: #306B34 !important;
 }
@@ -41,7 +42,12 @@ body {
 }
 
 footer p {
-  font-family: sans-serif;
+  float: left;
+  font-family: Montserrat, sans-serif;
+}
+
+footer h1 {
+  float: right;
 }
 
 .error {
