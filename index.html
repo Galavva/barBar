@@ -41,15 +41,11 @@
           <ul class="nav navbar-nav">
             <li><a href="#home">Home</a>
             </li>
-            <li>
-              <div class="dropdown">
-                <button class="dropbtn" onclick="dropdown()">Menu<span class="glyphicon glyphicon-triangle-bottom"></span>
-                </button>
-                <div class="dropdown-content" id="myDropdown">
-                  <a href="#food">Food</a>
-                  <a href="#drinks">Drinks</a>
-                </div>
-              </div>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#food">Food</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+              </ul>
             </li>
             <li><a href="#contact">Contact Us</a>
             </li>
@@ -65,7 +61,6 @@
           <h1><img src="images/BarkBarLogoNoBack.png" alt="Bark Bar Logo" style="width:150px;height:150px">Bark Bar</h1>
           <p>Welcome and thank you for checking out our website.  Bark Bar is a place for people who love two things.  Bars and dogs!  Whether you have a furry companion of your own or you just want to hang out with some dogs and similiar minded people then feel free to come on in check it out!  We have a full alcoholic bar and a full treat bar!
           </p>
-          <!--  Dog owners be sure to check out our <a href="forPuppers.html" target="_blank"> For Puppers</a> page to see what you need to bring your dog in. -->
         </div>
         <div class="col-sm-4">
           <img src="images/RunningPupper.jpg" class="img-rounded" alt="Running Pupper Image">
@@ -117,35 +112,6 @@
           </div>
         </div>
       </div>
-<!--
-        <tr>
-          <th>Food</th>
-          <th>Description</th>
-          <th>Cost</th>
-        </tr>
-        <tr>
-          <td>Loaded Fries<img src="images/Fries.jpg" class="img-responsive img-circle" alt="Loaded Fries" align="right"></td>
-          <td>Our cripsy loaded fries come with bacon and cheese. Doggos give it two paws up!</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Stuffed Mushrooms<img src="images/stuffedMush.jpeg" alt="Stuffed Mushrooms" class="img-responsive img-circle" align="right"></td>
-          <td>White mushrooms packed with breadcrumbs and romano cheese. Sure to get your mouth watering.</td>
-          <td>7</td>
-        </tr>
-        <tr>
-          <td>Spinach Dip<img src="images/spinachDip.jpeg" alt="Spinach Dip" class="img-responsive img-circle" align="right"></td>
-          <td>This cheesy spinach dip comes with our house baked tortilla chips</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Salsa<img src="images/salsa.jpeg" alt="Salsa" class="img-responsive img-circle" align="right"></td>
-          <td>Our sweet salsa is incredible for people but keep it away from the dogs. They're not big fans of onions.</td>
-          <td>5</td>
-        </tr>
-      </table>
-    </div>
-  -->
 
     <!-- Drinks -->
     <div class="container" id="drinks">
@@ -177,80 +143,6 @@
         </a>
       </div>
     </div>
-<!--
-
-      <h3>Wine</h3>
-      <img src="images/Wine.jpg" alt="wine" class="img-responsive img-circle">
-        <table class="table-striped">
-          <tr>
-            <th>Red</th>
-            <th>Cost</th>
-          </tr>
-          <tr>
-            <td>Merlot</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>Cabernet</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Red Blend</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <th>White</th>
-            <th>Cost</th>
-          </tr>
-          <tr>
-            <td>Chardonnay</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>Moscato</td>
-            <td>5</td>
-          </tr>
-        </table>
-
-        <h3>Beer</h3>
-        <img src="images/Beer.jpg" class="img-responsive img-circle">
-        <table class="table-striped">
-          <tr>
-            <th>Domestics</th>
-            <th>Cost</th>
-          </tr>
-          <tr>
-            <td>Bud Light</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Busch</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>Miller Lite</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <th>Imports</th>
-            <th>Cost</th>
-          </tr>
-            <td>Heineken</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>Guiness</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>Foster's</td>
-            <td>6</td>
-          </tr>
-        </table>
-    </div>
-
-  -->
-
 
     <!-- Contact Us -->
     <div class="container">
@@ -261,7 +153,7 @@
       <h1>Contact Us</h1>
       <h3>Please fill out this form and we'll get back to your provided email address as soon as possible</h3>
 
-        <form name="contactForm" onsubmit="return validateForm()" action="">
+        <form name="contactForm" onsubmit="return validateForm()" action="" method="get">
           <div class="form-group">
             <label for="First name">First Name
               <input type="text" class="form-control" name="firstName" placeholder="First Name">
@@ -283,6 +175,7 @@
         </form>
       </div>
     </div>
+
     <!-- Footer -->
     <footer>
       <hr>
@@ -299,19 +192,19 @@
         var invisibleError = document.getElementByID("errorMessage").style.visibility = "hidden";
         var fName = document.contactForm.firstName;
         var errorFlag = 0;
-        if (fName.value === "")
+        if (fName.value == "")
         {
           errorFlag++;
         }
 
         var lName = document.contactForm.lastName;
-        if(lName.value === "")
+        if(lName.value == "")
         {
           errorFlag++
         }
 
         var mail = document.contactForm.email;
-        if(mail.value === "")
+        if(mail.value == "")
         {
           errorFlag++
         }
