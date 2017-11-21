@@ -20,9 +20,7 @@ body {
     color: #fff !important;
 }
 */
-.navbar li dropdown a  {
-  color: #000000 !important;
-}
+
 .navbar-nav li a:hover, .navbar-nav li.active a{
     color: #000000;
     background-color: #306B34 !important;/* Green*/
